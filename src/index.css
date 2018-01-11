@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+/*@font-face {
+  font-family: 'NintendoSwitchUI';
+  src: url('./font/Nintendo_Switch_UI_Font.ttf') format('truetype');
+}*/
+@font-face {
+  font-family: 'MarkPro';
+  src: url('./font/MarkPro.otf') format('opentype');
+}
+@font-face {
+  font-family: 'MarkPro';
+  font-weight: 500;
+  src: url('./font/MarkPro-Medium.otf') format('opentype');
+}
+@font-face {
+  font-family: 'MarkPro';
+  font-weight: 600;
+  src: url('./font/MarkPro-Bold.otf') format('opentype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}

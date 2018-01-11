@@ -1,0 +1,22 @@
+@keyframes borderAnimation {
+  0% {
+    border-color: #46f4d9;
+  }
+  45% {
+    border-color: #36c8be;
+  }
+  55% {
+    border-color: #36c8be;
+  }
+  100% {
+    border-color: #46f4d9;
+  }
+}
+
+.HomeScreen {
+  height: 720px;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  /*transform: scale(1.5) translate(200px, 100px);*/
+}
