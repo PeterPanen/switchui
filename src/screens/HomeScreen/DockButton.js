@@ -28,7 +28,7 @@ const stylesHighlighted = icon => ({
   marginRight: 6,
   boxShadow: '0px 0px 6px 1px #dcdcdc',
   overflow: 'visible',
-  border: '5px solid #36c8be',
+  border: '5px solid #00abcb',
   animation: 'borderAnimation 1s infinite',
 });
 
@@ -36,7 +36,7 @@ const textStyles = visible => ({
   fontWeight: 500,
   marginTop: 1,
   position: 'absolute',
-  color: '#36c8be',
+  color: '#00abcb',
   fontSize: 30,
   letterSpacing: 0,
   width: 300,

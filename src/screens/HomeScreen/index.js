@@ -111,25 +111,13 @@ class HomeScreen extends Component {
             tileSelected: position + 1,
             buttonSelected: 0,
           }));
-        } else if (buttonSelected === 2) {
+        } else if (buttonSelected === 2 || buttonSelected === 3) {
           this.setState(state => ({
             activePane: 1,
             tileSelected: position + 2,
             buttonSelected: 0,
           }));
-        } else if (buttonSelected === 3) {
-          this.setState(state => ({
-            activePane: 1,
-            tileSelected: position + 2,
-            buttonSelected: 0,
-          }));
-        } else if (buttonSelected === 4) {
-          this.setState(state => ({
-            activePane: 1,
-            tileSelected: position + 3,
-            buttonSelected: 0,
-          }));
-        } else if (buttonSelected === 5) {
+        } else if (buttonSelected === 4 || buttonSelected === 5) {
           this.setState(state => ({
             activePane: 1,
             tileSelected: position + 3,
