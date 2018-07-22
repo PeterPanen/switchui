@@ -11,8 +11,8 @@ COPY . .
 RUN npm run build
 
 # Expose port and enable traefik proxy
-EXPOSE 3000
+EXPOSE 5000
 LABEL traefik.enable="true"
 
 # Run app
-CMD ["serve", "-l 3000", "./build"]
+CMD ["serve", "-s", "build"]
