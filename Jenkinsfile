@@ -11,13 +11,13 @@ pipeline {
         sh "docker build -t panen/switch:$BUILD_NUMBER ."
       }
     }
-    stage('Stopping') {
+    stage('Stopping old container') {
       steps {
         sh "docker stop switch || true"
         sh "docker rm switch || true"
       }
     }
-    stage('Starting') {
+    stage('Starting new container') {
       steps {
         sh "docker run -e BUILD_NUMBER=$BUILD_NUMBER --name switch -d panen/switch:$BUILD_NUMBER"
       }
