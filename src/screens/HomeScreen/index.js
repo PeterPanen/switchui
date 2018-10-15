@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import StatusBar from './StatusBar';
-import TilePanel from './TilePanel';
-import Footer from './Footer';
-import Dock from './Dock';
-import './stylesheet.css';
+import React, { Component } from "react";
+import StatusBar from "./StatusBar";
+import TilePanel from "./TilePanel";
+import Footer from "./Footer";
+import Dock from "./Dock";
+import "./stylesheet.css";
 
 class HomeScreen extends Component {
   state = {
     activePane: 1,
     tileSelected: 1,
     position: 0,
-    buttonSelected: 0,
+    buttonSelected: 0
   };
 
   componentDidMount() {
-    window.addEventListener('keydown', this.updateSelected.bind(this));
+    window.addEventListener("keydown", this.updateSelected.bind(this));
   }
 
   updateSelected(e) {
@@ -26,18 +26,18 @@ class HomeScreen extends Component {
           if (tileSelected - position === 1) {
             this.setState(state => ({
               tileSelected: state.tileSelected - 1,
-              position: state.position - 1,
+              position: state.position - 1
             }));
           } else {
             this.setState(state => ({
-              tileSelected: state.tileSelected - 1,
+              tileSelected: state.tileSelected - 1
             }));
           }
         }
       } else {
         if (buttonSelected > 1) {
           this.setState(state => ({
-            buttonSelected: state.buttonSelected - 1,
+            buttonSelected: state.buttonSelected - 1
           }));
         }
       }
@@ -50,18 +50,18 @@ class HomeScreen extends Component {
           if (tileSelected - position === 4) {
             this.setState(state => ({
               tileSelected: state.tileSelected + 1,
-              position: state.position + 1,
+              position: state.position + 1
             }));
           } else {
             this.setState(state => ({
-              tileSelected: state.tileSelected + 1,
+              tileSelected: state.tileSelected + 1
             }));
           }
         }
       } else {
         if (buttonSelected < 6) {
           this.setState(state => ({
-            buttonSelected: state.buttonSelected + 1,
+            buttonSelected: state.buttonSelected + 1
           }));
         }
       }
@@ -76,25 +76,25 @@ class HomeScreen extends Component {
           this.setState(state => ({
             activePane: 2,
             tileSelected: 0,
-            buttonSelected: 1,
+            buttonSelected: 1
           }));
         } else if (tileSelected - position === 2) {
           this.setState(state => ({
             activePane: 2,
             tileSelected: 0,
-            buttonSelected: 2,
+            buttonSelected: 2
           }));
         } else if (tileSelected - position === 3) {
           this.setState(state => ({
             activePane: 2,
             tileSelected: 0,
-            buttonSelected: 4,
+            buttonSelected: 4
           }));
         } else if (tileSelected - position === 4) {
           this.setState(state => ({
             activePane: 2,
             tileSelected: 0,
-            buttonSelected: 6,
+            buttonSelected: 6
           }));
         }
       }
@@ -109,25 +109,25 @@ class HomeScreen extends Component {
           this.setState(state => ({
             activePane: 1,
             tileSelected: position + 1,
-            buttonSelected: 0,
+            buttonSelected: 0
           }));
         } else if (buttonSelected === 2 || buttonSelected === 3) {
           this.setState(state => ({
             activePane: 1,
             tileSelected: position + 2,
-            buttonSelected: 0,
+            buttonSelected: 0
           }));
         } else if (buttonSelected === 4 || buttonSelected === 5) {
           this.setState(state => ({
             activePane: 1,
             tileSelected: position + 3,
-            buttonSelected: 0,
+            buttonSelected: 0
           }));
         } else if (buttonSelected === 6) {
           this.setState(state => ({
             activePane: 1,
             tileSelected: position + 4,
-            buttonSelected: 0,
+            buttonSelected: 0
           }));
         }
       }

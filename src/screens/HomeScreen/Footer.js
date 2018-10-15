@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
-import iconSwitch from './assets/switch-icon.png';
-import iconControlsAButton from './assets/control-a-button.png';
+import React, { Component } from "react";
+import iconSwitch from "./assets/switch-icon.png";
+import iconControlsAButton from "./assets/control-a-button.png";
 
 const footerStyles = {
-  display: 'flex',
-  flexWrap: 'no-wrap',
-  justifyContent: 'space-between',
-  whiteSpace: 'nowrap',
+  display: "flex",
+  flexWrap: "no-wrap",
+  justifyContent: "space-between",
+  whiteSpace: "nowrap",
   marginTop: 53,
   marginLeft: 30,
   marginRight: 30,
-  borderTop: '1px solid #2f2f2f',
+  borderTop: "1px solid #2f2f2f"
 };
 
 const iconWrapperStyles = {
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
   marginTop: 18,
   fontSize: 26,
-  color: '#474747',
-  paddingRight: 30,
+  color: "#474747",
+  paddingRight: 30
 };
 
 const Icon = ({ style, icon, width, height }) => {

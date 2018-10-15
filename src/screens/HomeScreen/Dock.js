@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import DockButton from './DockButton';
-import iconNews from './assets/icon-news.png';
-import iconEshop from './assets/icon-eshop.png';
-import iconAlbum from './assets/icon-album.png';
-import iconControllers from './assets/icon-controllers.png';
-import iconSystemSettings from './assets/icon-system-settings.png';
-import iconPowerOff from './assets/icon-power-off.png';
+import React, { Component } from "react";
+import DockButton from "./DockButton";
+import iconNews from "./assets/icon-news.png";
+import iconEshop from "./assets/icon-eshop.png";
+import iconAlbum from "./assets/icon-album.png";
+import iconControllers from "./assets/icon-controllers.png";
+import iconSystemSettings from "./assets/icon-system-settings.png";
+import iconPowerOff from "./assets/icon-power-off.png";
 
 const dockStyles = {
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'center',
-  alignItems: 'center',
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
   marginTop: 39,
   height: 100,
-  overflow: 'visible',
+  overflow: "visible"
 };
 
 class Dock extends Component {
