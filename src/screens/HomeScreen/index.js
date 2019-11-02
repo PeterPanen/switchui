@@ -46,7 +46,7 @@ class HomeScreen extends Component {
     // Arrow right
     if (e.keyCode === 39) {
       if (activePane === 1) {
-        if (tileSelected < 8) {
+        if (tileSelected < 9) {
           if (tileSelected - position === 4) {
             this.setState(state => ({
               tileSelected: state.tileSelected + 1,

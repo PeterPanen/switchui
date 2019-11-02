@@ -24,8 +24,13 @@
   src: URL("./font/nintendo_ext_003.ttf") format("ttf");
 }
 
+@font-face {
+  font-family: "NintendoSwitchUI";
+  src: URL("./font/Nintendo_Switch_UI_Font.ttf") format("ttf");
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "NintendoSwitchUI", sans-serif;
 }

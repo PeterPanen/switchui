@@ -8,6 +8,7 @@ import coverMarioKart from "./assets/cover-mariokart.png";
 import coverPokken from "./assets/cover-pokken.png";
 import coverShovelKnight from "./assets/cover-shovel-knight.png";
 import coverSplatoon from "./assets/cover-splatoon.png";
+import coverPokemonShield from "./assets/cover-pokemon-shield.png";
 
 const tilePanelStyles = (position, active) => ({
   display: "flex",
@@ -27,9 +28,9 @@ class TilePanel extends Component {
     return (
       <div style={tilePanelStyles(position, active)}>
         <Tile
-          title="Super Mario Oddysey"
-          cover={coverMarioOddysey}
+          title="Pokémon Shield ™"
           isHighlighted={tileSelected === 1}
+          cover={coverPokemonShield}
         />
         <Tile
           title="Grand Theft Auto V"
@@ -37,34 +38,39 @@ class TilePanel extends Component {
           cover={coverGta}
         />
         <Tile
+          title="Super Mario Oddysey"
+          cover={coverMarioOddysey}
+          isHighlighted={tileSelected === 3}
+        />
+        <Tile
           title="Pokken Tournament DX"
           cover={coverPokken}
-          isHighlighted={tileSelected === 3}
+          isHighlighted={tileSelected === 4}
         />
         <Tile
           title="Mario + Rabbids: Kingdom Battle"
           cover={coverMarioRabbids}
-          isHighlighted={tileSelected === 4}
+          isHighlighted={tileSelected === 5}
         />
         <Tile
           title="Shovel Knight: Treasure Trove"
           cover={coverShovelKnight}
-          isHighlighted={tileSelected === 5}
+          isHighlighted={tileSelected === 6}
         />
         <Tile
           title="Snipperclips"
-          isHighlighted={tileSelected === 6}
+          isHighlighted={tileSelected === 7}
           cover={coverSnipperclips}
         />
         <Tile
           title="Splatoon 2"
           cover={coverSplatoon}
-          isHighlighted={tileSelected === 7}
+          isHighlighted={tileSelected === 8}
         />
         <Tile
           title="Mario Kart 8 Deluxe"
           cover={coverMarioKart}
-          isHighlighted={tileSelected === 8}
+          isHighlighted={tileSelected === 9}
         />
       </div>
     );

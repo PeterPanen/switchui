@@ -34,10 +34,10 @@ const stylesHighlighted = icon => ({
 
 const textStyles = visible => ({
   fontWeight: 500,
-  marginTop: 1,
+  marginTop: 6,
   position: "absolute",
   color: "#00abcb",
-  fontSize: 30,
+  fontSize: 28,
   letterSpacing: 0,
   width: 300,
   textAlign: "center",
