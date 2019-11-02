@@ -19,6 +19,11 @@ class HomeScreen extends Component {
 
   updateSelected(e) {
     const { activePane, tileSelected, position, buttonSelected } = this.state;
+
+    if (e.keyCode === 13) {
+      window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    }
+
     // Arrow left
     if (e.keyCode === 37) {
       if (activePane === 1) {
