@@ -45,7 +45,7 @@ class StatusClock extends Component {
   };
 
   styles = {
-    padding: "7px 4px",
+    padding: "12px 4px",
     fontSize: 30,
     fontWeight: 600,
     color: "#2d2d2d",

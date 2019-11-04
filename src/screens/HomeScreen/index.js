@@ -20,10 +20,6 @@ class HomeScreen extends Component {
   updateSelected(e) {
     const { activePane, tileSelected, position, buttonSelected } = this.state;
 
-    if (e.keyCode === 13) {
-      window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-    }
-
     // Arrow left
     if (e.keyCode === 37) {
       if (activePane === 1) {
@@ -51,7 +47,7 @@ class HomeScreen extends Component {
     // Arrow right
     if (e.keyCode === 39) {
       if (activePane === 1) {
-        if (tileSelected < 9) {
+        if (tileSelected < 8) {
           if (tileSelected - position === 4) {
             this.setState(state => ({
               tileSelected: state.tileSelected + 1,
@@ -141,6 +137,7 @@ class HomeScreen extends Component {
 
   render() {
     const { activePane, buttonSelected, tileSelected, position } = this.state;
+    const { games } = this.props;
     return (
       <div className="HomeScreen">
         <StatusBar />
@@ -148,6 +145,7 @@ class HomeScreen extends Component {
           active={activePane === 1}
           tileSelected={tileSelected}
           position={position}
+          games={games}
         />
         <Dock active={activePane === 2} buttonSelected={buttonSelected} />
         <Footer />

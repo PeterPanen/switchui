@@ -4,6 +4,7 @@ const tileStylesWithCover = cover => ({
   width: 256,
   height: 256,
   backgroundImage: `url(${cover})`,
+  backgroundSize: "contain",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center"
 });

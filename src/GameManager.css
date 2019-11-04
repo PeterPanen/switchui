@@ -1,0 +1,7 @@
+.GameManager input[type="text"]:nth-child(1) {
+  width: 200px;
+}
+
+.GameManager input[type="text"]:nth-child(2) {
+  width: 800px;
+}
