@@ -15,4 +15,4 @@ EXPOSE 5000
 LABEL traefik.enable="true"
 
 # Run app
-CMD ["serve", "-s", "build"]
+CMD ["serve", "-s", "-d", "build"]
