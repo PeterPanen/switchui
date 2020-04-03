@@ -4,7 +4,7 @@
 git pull
 
 # Get current running container version
-current_version=`docker ps --filter name=switchui --format {{.Image}} | cut -d ":" -f2`
+current_version=`docker ps --filter name=switch --format {{.Image}} | cut -d ":" -f2`
 
 # Get package.json version
 pkg_version=`bash version.sh`
@@ -16,8 +16,8 @@ then
   echo "Deployment aborted"
 else
   echo "------ Deployment started ------"
-  docker build -t panen/switchui:$pkg_version .
-  docker stop switchui
-  docker rm switchui
-  docker run -e BUILD_NUMBER=$pkg_version --name switchui -d panen/switchui:$pkg_version  
+  docker build -t panen/switch:$pkg_version .
+  docker stop switch
+  docker rm switch
+  docker run -e BUILD_NUMBER=$pkg_version --name switch -d panen/switch:$pkg_version  
 fi
