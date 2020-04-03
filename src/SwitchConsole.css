@@ -1,0 +1,59 @@
+.str2 {
+  stroke: #373435;
+  stroke-width: 50;
+}
+.str1 {
+  stroke: #30363a;
+  stroke-width: 50;
+}
+.str0 {
+  stroke: #373435;
+  stroke-width: 20;
+}
+.fil10 {
+  fill: none;
+}
+.fil2 {
+  fill: #606062;
+}
+.fil1 {
+  fill: #373435;
+}
+.fil9 {
+  fill: #1d1f21;
+}
+.fil4 {
+  fill: #2b2c2e;
+}
+.fil0 {
+  fill: #30363a;
+}
+.fil8 {
+  fill: #56616a;
+}
+.fil3 {
+  fill: #949ea5;
+}
+.fil7 {
+  fill: #b5c0c7;
+}
+.fil13 {
+  fill: #fefefe;
+  fill-rule: nonzero;
+}
+.fil14 {
+  fill: #2b2c2e;
+  fill-rule: nonzero;
+}
+.fil12 {
+  fill: url(#id0);
+}
+.fil11 {
+  fill: url(#id1);
+}
+.fil5 {
+  fill: url(#id2);
+}
+.fil6 {
+  fill: url(#id3);
+}
