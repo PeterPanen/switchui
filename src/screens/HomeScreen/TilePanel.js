@@ -19,11 +19,7 @@ class TilePanel extends Component {
     return (
       <div style={tilePanelStyles(position, active)}>
         {games.map((game, idx) => (
-          <Tile
-            title={game.title}
-            isHighlighted={tileSelected === idx + 1}
-            cover={game.imageUrl}
-          />
+          <Tile key={idx} title={game.title} isHighlighted={tileSelected === idx + 1} cover={game.imageUrl} />
         ))}
       </div>
     );

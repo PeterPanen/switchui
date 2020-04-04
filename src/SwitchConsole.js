@@ -1,11 +1,83 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./SwitchConsole.css";
 
-export default function SwitchConsole() {
+export default function SwitchConsole({ inputEvent }) {
+  const [buttonStates, setButtonStates] = useState({
+    KeyW: false,
+    KeyA: false,
+    KeyS: false,
+    KeyD: false,
+    KeyO: false,
+    KeyP: false,
+    KeyK: false,
+    KeyL: false,
+    ArrowUp: false,
+    ArrowLeft: false,
+    ArrowDown: false,
+    ArrowRight: false,
+  });
+
+  useEffect(() => {
+    if (!inputEvent) return;
+
+    setButtonStates({
+      ...buttonStates,
+      [inputEvent.code]: inputEvent.type === "keydown",
+    });
+  }, [inputEvent]);
+
+  function getLeftStickStyles() {
+    let translateX = "translateX(0px)";
+    let translateY = "translateX(0px)";
+    if (buttonStates.KeyD) {
+      translateX = "translateX(300px)";
+    } else if (buttonStates.KeyA) {
+      translateX = "translateX(-300px)";
+    }
+
+    if (buttonStates.KeyS) {
+      translateY = "translateY(300px)";
+    } else if (buttonStates.KeyW) {
+      translateY = "translateY(-300px)";
+    }
+
+    return {
+      fill: "#3a3c3b",
+      transform: `${translateX} ${translateY}`,
+    };
+  }
+
+  function getRightStickStyles() {
+    let translateX = "translateX(0px)";
+    let translateY = "translateX(0px)";
+    if (buttonStates.ArrowRight) {
+      translateX = "translateX(300px)";
+    } else if (buttonStates.ArrowLeft) {
+      translateX = "translateX(-300px)";
+    }
+
+    if (buttonStates.ArrowDown) {
+      translateY = "translateY(300px)";
+    } else if (buttonStates.ArrowUp) {
+      translateY = "translateY(-300px)";
+    }
+
+    return {
+      fill: "#3a3c3b",
+      transform: `${translateX} ${translateY}`,
+    };
+  }
+
+  function getButtonFlashStyle(buttonState, currentColor) {
+    return {
+      fill: buttonState ? "#FFFFFF" : currentColor,
+    };
+  }
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      xmlspace="preserve"
+      xmlSpace="preserve"
       width="2208.47px"
       version="1.1"
       style={{
@@ -13,10 +85,10 @@ export default function SwitchConsole() {
         textRendering: "geometricPrecision",
         imageRendering: "optimizeQuality",
         fillRule: "evenodd",
-        clipRule: "evenodd"
+        clipRule: "evenodd",
       }}
       viewBox="0 0 25453 10856"
-      xmlnsxlink="http://www.w3.org/1999/xlink"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <g id="Capa_x0020_1">
         <metadata id="CorelCorpID_0Corel-Layer" />
@@ -45,7 +117,7 @@ export default function SwitchConsole() {
           />
           <rect className="fil4 str0" x={2735} y={949} width={566} height={201} />
           <circle style={{ fill: "#4f5153" }} className="fil5 str1" cx={1846} cy={2669} r={841} />
-          <circle style={{ fill: "#3a3c3b" }} className="fil6 str1" cx={1846} cy={2669} r={674} />
+          <circle style={getLeftStickStyles()} className="analog-stick fil6 str1" cx={1846} cy={2669} r={674} />
           <circle style={{ fill: "#8c9294" }} className="fil7 str0" cx={23061} cy={7897} r={421} />
           <circle style={{ fill: "#3a3c3b" }} className="fil8 str0" cx={1915} cy={4859} r={392} />
           <circle style={{ fill: "#3a3c3b" }} className="fil8 str0" cx={2793} cy={5669} r={392} />
@@ -71,12 +143,36 @@ export default function SwitchConsole() {
             className="fil4 str0"
             points="22953,949 22771,949 22771,766 22570,766 22570,949 22387,949 22387,1150 22570,1150 22570,1332 22771,1332 22771,1150 22953,1150 "
           />
-          <circle style={{ fill: "#5774b8" }} className="fil8 str0" cx={23673} cy={2074} r={392} />
-          <circle style={{ fill: "#ec5c5c" }} className="fil8 str0" cx={24552} cy={2884} r={392} />
-          <circle style={{ fill: "#e8d651" }} className="fil8 str0" cx={23678} cy={3704} r={392} />
-          <circle style={{ fill: "#5eb08a" }} className="fil8 str0" cx={22842} cy={2889} r={392} />
+          <circle
+            style={getButtonFlashStyle(buttonStates.KeyO, "#5774b8")}
+            className="transitionFill fil8 str0"
+            cx={23673}
+            cy={2074}
+            r={392}
+          />
+          <circle
+            style={getButtonFlashStyle(buttonStates.KeyP, "#ec5c5c")}
+            className="transitionFill fil8 str0"
+            cx={24552}
+            cy={2884}
+            r={392}
+          />
+          <circle
+            style={getButtonFlashStyle(buttonStates.KeyL, "#e8d651")}
+            className="transitionFill fil8 str0"
+            cx={23678}
+            cy={3704}
+            r={392}
+          />
+          <circle
+            style={getButtonFlashStyle(buttonStates.KeyK, "#5eb08a")}
+            className="transitionFill fil8 str0"
+            cx={22842}
+            cy={2889}
+            r={392}
+          />
           <circle style={{ fill: "#4f5153" }} className="fil11 str1" cx={23720} cy={5873} r={841} />
-          <circle style={{ fill: "#3a3c3b" }} className="fil12 str1" cx={23720} cy={5873} r={674} />
+          <circle style={getRightStickStyles()} className="analog-stick fil12 str1" cx={23720} cy={5873} r={674} />
           <polygon
             className="fil13"
             points="22861,3019 22824,3019 22824,2907 22727,2759 22771,2759 22843,2877 22916,2759 22958,2759 22861,2907 "

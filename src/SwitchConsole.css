@@ -1,3 +1,11 @@
+.analog-stick {
+  transition: transform 30ms;
+}
+
+.transitionFill {
+  transition: fill 200ms;
+}
+
 .str2 {
   stroke: #373435;
   stroke-width: 50;
@@ -5,10 +13,6 @@
 .str1 {
   stroke: #30363a;
   stroke-width: 50;
-}
-.str0 {
-  stroke: #373435;
-  stroke-width: 20;
 }
 .fil10 {
   fill: none;
