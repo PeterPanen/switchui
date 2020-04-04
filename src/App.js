@@ -74,7 +74,6 @@ class App extends Component {
   }
 
   setInputEvent(e) {
-    console.log(e);
     this.setState({
       inputEvent: {
         type: e.type,
